@@ -1,0 +1,38 @@
+
+CREATE DATABASE newsletter;
+=====================================================================
+CREATE TABLE UserInfo(
+ID int IDENTITY(1111,1) PRIMARY KEY,
+Name varchar(10),
+lName varchar(15),
+Phone varchar(15),
+Email varchar(25),
+Suite varchar(5),
+Street varchar(25),
+City varchar(20),
+Coutry varchar(15)
+);
+ALTER TABLE UserInfo
+ALTER COLUMN Phone varchar(15); ==> to change 'Phone int' into 'Phone varchar(15)'
+ALTER COLUMN Suite varchar(5);
+
+INSERT INTO UserInfo (Name, lName, Phone, Email, Suite, Street, City, Coutry) 
+VALUES('Alan', 'Aaaa', '6047862247', 'alan@gmail.com', '333', '240 Burrard St', 'North Vancouver', 'Canada');		==> ID=1111
+INSERT INTO UserInfo (Name, lName, Phone, Email, Street, City, Coutry) 
+VALUES('Roman', 'Rrrr', '1234567890', 'Roman64@gmail.com', '33453 E 42nd Ave', 'Burnaby', 'Canada');			==> ID=1112
+VALUES('Mora', 'Mmmmmm', '2502387709', 'lady-bug@yahoo.com', '1234 Ontario Street', 'Norade', 'Germany');		==> ID=1113
+=====================================================================
+CREATE TABLE UserLogin(
+uID int IDENTITY(1,1) PRIMARY KEY,
+uName varchar(15),
+uPass varchar(15),
+keyID int
+);
+ALTER TABLE UserLogin
+ADD keyID int; ==> adds column to the table, the column will hold ids from UserInfo table;
+
+INSERT INTO UserLogin(uName, uPass,keyID)
+VALUES('Admin', 'Admin123',1110);
+VALUES('Alan', 'Alan123',1111);
+VALUES('Roman', 'Roman123',1112);
+VALUES('Mora', 'Mora123',1113);

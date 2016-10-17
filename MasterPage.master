@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>NL</title>
+    <link href="myStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img src="../img/header_Logo.png" style="float:left;"/>
+        <h1 id="three-d">NewsLetters for You</h1>
+    </header>
+
+    <form id="form1" runat="server">
+    <div>
+        <div id="buttonHolder">
+            <asp:Button ID="btnHome" runat="server" Text="Home" CssClass="nav_buttons" OnClick="btnHome_Click" />
+<%--            <asp:Button ID="btnContact" runat="server" Text="Contact" CssClass="nav_buttons" OnClick="btnContact_Click" />--%>
+            <asp:Button ID="btnNL" runat="server" Text="NewsLetters" CssClass="nav_buttons" OnClick="btnNL_Click" />  <%-- Visible="False"--%>
+            <asp:Button ID="btnNL2" runat="server" Text="Add NL" CssClass="nav_buttons" OnClick="btnNL2_Click" />  <%--Visible="False"--%>
+            <asp:Button ID="btnAdmin" runat="server" Text="Admin Page" CssClass="nav_buttons" OnClick="btnAdmin_Click"/>  <%----%>
+            <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="nav_buttons2" OnClick="btnLogin_Click" />
+            <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="nav_buttons2" OnClick="btnRegister_Click" />
+            <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="nav_buttons2" OnClick="btnLogout_Click" />
+
+        </div>
+<%--        <asp:TextBox ID="TextBox1" runat="server" Width="496px"></asp:TextBox>--%>
+
+        <div id="mainDiv">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        <%--different content on different pages--%>
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,97 @@
+﻿body {
+    background-color: #ace6b4;
+    width:999px;
+    margin:0 auto;
+    padding:0;
+    color:#07380e;
+}
+header{
+    border:1px solid black;
+    height:165px;
+}
+/*=========================================================================*/
+#buttonHolder{
+    text-align:center;
+    padding:10px;
+}
+.nav_buttons{
+    display:inline-block;
+    margin-top: -5px;
+    border-radius: 0.5em;
+    background-color: #0d5615;
+    color: #5cb966;
+    vertical-align: central;
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.nav_buttons:hover{
+    background-color: #5cb966;
+    color: #0d5615;
+    border: 2px solid #0d5615;
+}
+.nav_buttons2{
+    float:right;
+    vertical-align: text-bottom;
+    color:#07380e;
+    width: 70px;
+    border: none;
+    background: none;
+    padding:10px;
+}
+.nav_buttons2:hover {
+    font-size:14px;
+    font-weight:bold;
+}
+.nav_buttons2:focus { 
+    outline: none; 
+}
+/*=========================================================================*/
+#mainDiv{
+    border:1px solid black;
+    padding:1%;
+}
+#wrapper { /*main div hold the content and the sidebar*/
+    border:1px solid black;
+    margin: 0 auto;
+    width: 999px;
+    padding-right: 25%; /* padding should be the total width of all right columns */
+}
+#content { /*content div*/
+    border:1px solid black;
+    float: left;
+    width: 75%;
+    padding-right: 2%;
+}
+.sidebar { /*sidebar div*/
+    border:1px solid black;
+    float: left;
+    width: 24%;
+    margin-right: -999px;
+}
+/*=========================================================================*/
+.userLabels{
+    font-weight:bold;
+    width:50px;
+    margin-left:50px;
+}
+table{
+    margin-left:5%;
+}
+.login_buttons{
+    display:inline-block;
+    margin-top: -5px;
+    background-color: #0d5615;
+    color: #5cb966;
+    vertical-align: central;
+    width: 170px;
+    padding: 5px;
+    font-weight:bold;
+}
+#three-d { /*page title in header*/
+	color: #fff;
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	font: 80px 'ChunkFiveRegular';
+}
+
